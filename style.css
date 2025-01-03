@@ -11,6 +11,7 @@ body {
     background-color: #f4f4f0; /* Soft beige background */
     color: #333; /* Dark, earthy text color */
     margin: 0;
+    overflow-x: hidden;
 }
 
 .container {
@@ -21,30 +22,49 @@ body {
 
 /* Header Section */
 header {
-    background-color: #6a994e; /* Earthy green */
-    color: #f4f4f0; /* Soft beige */
-    padding: 20px 0;
+    position: relative;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
     text-align: center;
-    border-bottom: 4px solid #386641; /* Deep green border */
+    background: linear-gradient(135deg, #6a994e, #386641);
+    color: #f4f4f0;
+}
+
+header img {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    border: 5px solid #f4f4f0;
+    animation: photo-bounce 3s infinite;
+    transition: transform 0.3s ease-in-out;
+}
+
+header img:hover {
+    transform: scale(1.1);
 }
 
 header h1 {
     font-size: 2.5rem;
     font-weight: bold;
-    margin-bottom: 10px;
+    margin: 20px 0 10px;
+    animation: fade-in 2s ease-in-out;
 }
 
 header p {
     font-size: 1.2rem;
     margin-bottom: 15px;
+    animation: fade-in 2s ease-in-out 1s;
 }
 
 header nav ul {
     list-style: none;
     padding: 0;
     display: flex;
-    justify-content: center;
     gap: 15px;
+    animation: slide-in 2s ease-in-out 1.5s;
 }
 
 header nav ul li a {
@@ -59,10 +79,57 @@ header nav ul li a:hover {
     color: #a7c957; /* Lighter green */
 }
 
+/* Animations */
+@keyframes photo-bounce {
+    0%, 100% {
+        transform: translateY(0);
+    }
+    50% {
+        transform: translateY(-15px);
+    }
+}
+
+@keyframes fade-in {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+@keyframes slide-in {
+    from {
+        transform: translateY(-50px);
+        opacity: 0;
+    }
+    to {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
 /* Section Styling */
 .section {
     padding: 50px 0;
     border-bottom: 1px solid #ddd;
+    opacity: 0;
+    animation: section-fade-in 1.5s forwards;
+}
+
+@keyframes section-fade-in {
+    from {
+        opacity: 0;
+        transform: translateY(50px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.section:nth-child(odd) {
+    background-color: #edf6e5; /* Soft green background */
 }
 
 .section h2 {
@@ -92,9 +159,10 @@ header nav ul li a:hover {
 .experience-item {
     margin-bottom: 30px;
     padding: 20px;
-    background-color: #edf6e5; /* Soft green background */
+    background-color: #fffdf6; /* Light beige background */
     border: 1px solid #ddd;
     border-radius: 8px;
+    animation: fade-in 1.5s ease-in-out;
 }
 
 .experience-item h3 {
@@ -107,9 +175,10 @@ header nav ul li a:hover {
 .project-item {
     margin-bottom: 20px;
     padding: 20px;
-    background-color: #fffdf6; /* Light beige background */
+    background-color: #edf6e5; /* Soft green background */
     border: 1px solid #ddd;
     border-radius: 8px;
+    animation: fade-in 1.5s ease-in-out;
 }
 
 .project-item h3 {
@@ -166,5 +235,10 @@ footer p {
 
     header h1 {
         font-size: 2rem;
+    }
+
+    header img {
+        width: 120px;
+        height: 120px;
     }
 }
