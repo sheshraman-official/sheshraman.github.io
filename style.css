@@ -1,0 +1,170 @@
+/* General Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Georgia', serif;
+    line-height: 1.6;
+    background-color: #f4f4f0; /* Soft beige background */
+    color: #333; /* Dark, earthy text color */
+    margin: 0;
+}
+
+.container {
+    width: 90%;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+/* Header Section */
+header {
+    background-color: #6a994e; /* Earthy green */
+    color: #f4f4f0; /* Soft beige */
+    padding: 20px 0;
+    text-align: center;
+    border-bottom: 4px solid #386641; /* Deep green border */
+}
+
+header h1 {
+    font-size: 2.5rem;
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+
+header p {
+    font-size: 1.2rem;
+    margin-bottom: 15px;
+}
+
+header nav ul {
+    list-style: none;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+}
+
+header nav ul li a {
+    text-decoration: none;
+    color: #f4f4f0;
+    font-size: 1.1rem;
+    font-weight: bold;
+    transition: color 0.3s;
+}
+
+header nav ul li a:hover {
+    color: #a7c957; /* Lighter green */
+}
+
+/* Section Styling */
+.section {
+    padding: 50px 0;
+    border-bottom: 1px solid #ddd;
+}
+
+.section h2 {
+    font-size: 2rem;
+    color: #386641; /* Deep green */
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+.section p, .section ul {
+    font-size: 1rem;
+    margin-bottom: 15px;
+    color: #444;
+}
+
+.section ul {
+    list-style: disc;
+    margin-left: 40px;
+}
+
+/* About Section */
+#about ul li {
+    margin-bottom: 10px;
+}
+
+/* Experience Section */
+.experience-item {
+    margin-bottom: 30px;
+    padding: 20px;
+    background-color: #edf6e5; /* Soft green background */
+    border: 1px solid #ddd;
+    border-radius: 8px;
+}
+
+.experience-item h3 {
+    color: #386641; /* Deep green */
+    font-size: 1.5rem;
+    margin-bottom: 10px;
+}
+
+/* Projects Section */
+.project-item {
+    margin-bottom: 20px;
+    padding: 20px;
+    background-color: #fffdf6; /* Light beige background */
+    border: 1px solid #ddd;
+    border-radius: 8px;
+}
+
+.project-item h3 {
+    font-size: 1.3rem;
+    color: #6a994e; /* Earthy green */
+    margin-bottom: 5px;
+}
+
+/* Skills Section */
+#skills ul {
+    list-style: square;
+    margin-left: 40px;
+}
+
+#skills ul li {
+    margin-bottom: 10px;
+}
+
+/* Contact Section */
+#contact a {
+    text-decoration: none;
+    color: #6a994e; /* Earthy green */
+    font-weight: bold;
+    transition: color 0.3s;
+}
+
+#contact a:hover {
+    color: #386641; /* Deep green */
+}
+
+/* Footer */
+footer {
+    text-align: center;
+    background-color: #386641; /* Deep green */
+    color: #f4f4f0; /* Soft beige */
+    padding: 15px 0;
+    margin-top: 20px;
+}
+
+footer p {
+    font-size: 0.9rem;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    header nav ul {
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    .section h2 {
+        font-size: 1.8rem;
+    }
+
+    header h1 {
+        font-size: 2rem;
+    }
+}
